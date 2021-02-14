@@ -33,6 +33,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import digital.witte.wittemobilelibrary.box.BoxFeedback;
+import digital.witte.wittemobilelibrary.box.BoxIdConverter;
+import digital.witte.wittemobilelibrary.box.BoxState;
 import io.flutter.embedding.engine.plugins.FlutterPlugin;
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
@@ -203,39 +206,6 @@ public class TapkeyFlutterPlugin2Plugin implements FlutterPlugin, MethodCallHand
                       });
               return null;
             });
-
-//    witteTokenProvider.AccessToken()
-//            .continueOnUi(accessToken -> {
-//              System.out.println("Retrieved Access token: " + accessToken);
-//
-//              if (null != accessToken && accessToken != "") {
-//                // login with access token
-//                userManager().logInAsync(accessToken, CancellationTokens.None)
-//                        .continueOnUi(userId -> {
-//                          System.out.println("Got UserId: " + userId);
-//
-//                          result.success(userId);
-//                          return null;
-//                        })
-//                        .catchAsyncOnUi(e -> {
-//                          System.out.println("Caught exception asyncOnUi");
-//                          result.error("LoginMethod", e.getMessage(), e);
-//                          return null;
-//                        })
-//                        .catchOnUi(e -> {
-//                          System.out.println("Caught exception onUi");
-//                          e.printStackTrace();
-//                          result.error("LoginMethod", e.getMessage(), e);
-//                          return null;
-//                        });
-//              }
-//              return null;
-//            })
-//            .catchOnUi(e -> {
-//              e.printStackTrace();
-//              result.error("LoginMethod", e.getMessage(), e);
-//              return null;
-//            });
 
     return null;
   }
@@ -466,6 +436,11 @@ public class TapkeyFlutterPlugin2Plugin implements FlutterPlugin, MethodCallHand
     return map;
   }
 
+  private void onLocksChanged(Map<String, BleLock> locks) {
+    List<Map<String, Object>> locksList = bleLockMapToList(locks);
+
+    channel.invokeMethod("onLocksChanged", locksList);
+  }
 
   class myIdTokenRefreshHandler implements IdTokenRefreshHandler {
     @Override
@@ -491,11 +466,5 @@ public class TapkeyFlutterPlugin2Plugin implements FlutterPlugin, MethodCallHand
 
       return promiseSource.getPromise();
     }
-  }
-
-  private void onLocksChanged(Map<String, BleLock> locks) {
-    List<Map<String, Object>> locksList = bleLockMapToList(locks);
-
-    channel.invokeMethod("onLocksChanged", locksList);
   }
 }
