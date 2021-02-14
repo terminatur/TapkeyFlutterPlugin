@@ -1,0 +1,48 @@
+group 'com.flutter.plugin.tapkey_flutter_plugin2'
+version '1.0'
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.0'
+    }
+}
+
+rootProject.allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url "https://maven.tapkey.com" }
+    }
+}
+
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 29
+
+    defaultConfig {
+        minSdkVersion 24
+    }
+    lintOptions {
+        disable 'InvalidPackage'
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+
+dependencies {
+    implementation 'com.tapkey.android:Tapkey.MobileLib:2.7.2.0'
+
+    implementation 'digital.witte:witte-mobile-library:1.0.0'
+
+    // Token exchange
+    implementation 'net.openid:appauth:0.7.1'
+}

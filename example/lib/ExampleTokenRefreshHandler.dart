@@ -1,0 +1,11 @@
+import 'package:tapkey_flutter_plugin2/tapkey_flutter_plugin2.dart';
+
+class ExampleTokenRefreshHandler extends TokenRefreshHandler {
+  @override
+  Future<String> getIdToken() {
+    // TODO: implement getIdToken
+    print("ExampleTokenRefreshHandler | looking for a id token. ");
+    return Future.value("eyJhbGciOiJSUzI1NiIsImtpZCI6IkU1QTUxRjZEOUY1NjNGODgzRkVDOUIxREUyM0M4QkJCNzJGM0U2QjgifQ.eyJzdWIiOiIyMDM1YzIzYS1kZTNlLTQ1Y2UtOWYyMi0zYzBmNzlkMGNkNDgiLCJpc3MiOiJodHRwczovL3d3dy53aXR0ZS5kaWdpdGFsIiwiYXVkIjoiZjhiOGJiMTctNTkzYS00NzUwLTliNGUtMmZiMDY5ZDZkMjlhIiwiaWF0IjoxNjEzMjY1Nzk0LCJleHAiOjE2MTMyNjkzOTQsImVtYWlsIjoiMjAzNWMyM2EtZGUzZS00NWNlLTlmMjItM2MwZjc5ZDBjZDQ4In0.eMdJTiSBE6QAfwioGqJ58SQXNcKGMGWVaAP5U2ClDTh4JkyP6yINUVhN2DeeW4JKAMmooZ4tpwqUh0h4InSXtDXsGI-EYRw4JTAReZNBq7rvxpVenNlMe8MBMM-pr1DvmWk3ClAiCbHd2TtIGyZ53f_VxTQhPXMZQI4P63uF4yejleN7nFm_507dujqnjeUMURb0LiBgjDsJmvHBhdr16n9371KF-98ABRt0ftppTHp-mw_j2ZWfU4w65-84EfQif2RrOSNS7wnLhjp0iSok7JS8N6MPjaQxd-dMLTwvIR1qhFXAJ4MxIlL40_-KtA4RzR0OGS-JlddJTU047dN_zw");
+  }
+
+}
