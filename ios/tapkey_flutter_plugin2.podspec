@@ -14,6 +14,8 @@ A new Flutter plugin.
   s.author           = { 'Your Company' => 'email@example.com' }
   s.source           = { :path => '.' }
   s.source_files = 'Classes/**/*'
+  s.source           = 'https://github.com/tapkey/TapkeyCocoaPods'
+  s.dependency 'TapkeyMobileLib', '2.7.2.0'
   s.dependency 'Flutter'
   s.platform = :ios, '8.0'
 
