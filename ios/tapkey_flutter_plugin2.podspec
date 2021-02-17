@@ -13,13 +13,22 @@ A new Flutter plugin.
   s.license          = { :file => '../LICENSE' }
   s.author           = { 'Your Company' => 'email@example.com' }
   s.source           = { :path => '.' }
+#  s.source = { :git => 'https://github.com/tapkey/TapkeyCocoaPods', :tag=> '2.7.2.0' }
   s.source_files = 'Classes/**/*'
-  s.source           = 'https://github.com/tapkey/TapkeyCocoaPods'
-  s.dependency 'TapkeyMobileLib', '2.7.2.0'
   s.dependency 'Flutter'
-  s.platform = :ios, '8.0'
+  s.dependency 'witte-mobile-library', '1.0.0'
+  s.dependency 'AppAuth'
+  s.dependency 'TapkeyMobileLib', '2.7.2.0'
+#  s.dependency 'TapkeyMobileLib', :git => 'https://github.com/tapkey/TapkeyCocoaPods', :tag=> '2.7.2.0'
+#  s.dependency { :git => 'https://github.com/tapkey/TapkeyCocoaPods' }
+  s.platform = :ios, '9.0'
+  s.ios.deployment_target = '9.0'
+  
+#  s.subspec 'pAuth' do |auth|
+#    auth.source = { :git => 'git://https://github.com/openid/AppAuth-iOS.git', :tag=> 'v1.3.0' }
+#  end
 
   # Flutter.framework does not contain a i386 slice.
-  s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
-  s.swift_version = '5.0'
+#  s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
+#  s.swift_version = '5.0'
 end
