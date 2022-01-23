@@ -1,0 +1,64 @@
+PODS:
+  - AppAuth (1.4.0):
+    - AppAuth/Core (= 1.4.0)
+    - AppAuth/ExternalUserAgent (= 1.4.0)
+  - AppAuth/Core (1.4.0)
+  - AppAuth/ExternalUserAgent (1.4.0)
+  - Flutter (1.0.0)
+  - GsonJ2ObjC-Light (2.3.1-2):
+    - J2ObjC/JreCore (= 2.1.1-2)
+  - J2ObjC/JreCore (2.1.1-2)
+  - J2ObjC/JreUtil (2.1.1-2):
+    - J2ObjC/JreCore
+  - "permission_handler (5.1.0+2)":
+    - Flutter
+  - SocketRocket (0.5.1)
+  - tapkey_flutter_plugin2 (0.0.1):
+    - AppAuth
+    - Flutter
+    - TapkeyMobileLib (= 2.7.2.0)
+    - witte-mobile-library (= 1.0.0)
+  - TapkeyMobileLib (2.7.2.0):
+    - GsonJ2ObjC-Light (= 2.3.1-2)
+    - J2ObjC/JreCore (= 2.1.1-2)
+    - J2ObjC/JreUtil (= 2.1.1-2)
+    - SocketRocket (= 0.5.1)
+  - witte-mobile-library (1.0.0)
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - permission_handler (from `.symlinks/plugins/permission_handler/ios`)
+  - tapkey_flutter_plugin2 (from `.symlinks/plugins/tapkey_flutter_plugin2/ios`)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - AppAuth
+    - SocketRocket
+    - witte-mobile-library
+  https://github.com/tapkey/TapkeyCocoaPods:
+    - GsonJ2ObjC-Light
+    - J2ObjC
+    - TapkeyMobileLib
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  permission_handler:
+    :path: ".symlinks/plugins/permission_handler/ios"
+  tapkey_flutter_plugin2:
+    :path: ".symlinks/plugins/tapkey_flutter_plugin2/ios"
+
+SPEC CHECKSUMS:
+  AppAuth: 31bcec809a638d7bd2f86ea8a52bd45f6e81e7c7
+  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+  GsonJ2ObjC-Light: dc1d84f6d10ae0212a04a6ca8b9e91565ae240fa
+  J2ObjC: 75f0e1eaa1a3c2ae26d7d78276cf68a7cdde850f
+  permission_handler: ccb20a9fad0ee9b1314a52b70b76b473c5f8dab0
+  SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
+  tapkey_flutter_plugin2: 175713a144b9634ece7d413d51990d3e2320c9aa
+  TapkeyMobileLib: 5a4a5291aeecbe7c6ac0e464120a1cd13f286b59
+  witte-mobile-library: 3d02d77e5226a6f79e19b5f913e128e0e644c65c
+
+PODFILE CHECKSUM: 91f55de86f8730f52e39f245525e66194faeb956
+
+COCOAPODS: 1.10.1

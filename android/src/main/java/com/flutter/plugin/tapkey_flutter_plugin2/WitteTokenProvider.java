@@ -46,8 +46,6 @@ public class WitteTokenProvider {
     public Promise<String> AccessToken(String idToken) {
         System.out.println("Calling TokenProvider->AccessToken");
 
-//        String idToken = "eyJhbGciOiJSUzI1NiIsImtpZCI6IkU1QTUxRjZEOUY1NjNGODgzRkVDOUIxREUyM0M4QkJCNzJGM0U2QjgifQ.eyJzdWIiOiIyMDM1YzIzYS1kZTNlLTQ1Y2UtOWYyMi0zYzBmNzlkMGNkNDgiLCJpc3MiOiJodHRwczovL3d3dy53aXR0ZS5kaWdpdGFsIiwiYXVkIjoiZjhiOGJiMTctNTkzYS00NzUwLTliNGUtMmZiMDY5ZDZkMjlhIiwiaWF0IjoxNjEzMDA4OTMyLCJleHAiOjE2MTMwMTI1MzIsImVtYWlsIjoiMjAzNWMyM2EtZGUzZS00NWNlLTlmMjItM2MwZjc5ZDBjZDQ4In0.nE2YKoiA3JgXbxS9lynDz5X5VmRloK0Ihrcp4S5Dq8BeJ-yJYX95k7Z3pJiJV3VyneYk2qsbeRv2EqeSCf7UBSOunVKpQfXWAKauPDDo4T05kZKB5FRwjlWuwTrHGNWm7afOYz9Q14vH4Y6j68UbwKTVDd0rt9mnLRuSlmfvH7zJxivPqr1hBzfaxrCw78CKHg-589c2FqquYXU5_wWKo8M0nkLSFnQloaeLXYazSWOTNDK6kavJue4lnYvkABE2VxLtaZlEI33SayX_y05ngnBsvxmJzYYRAQqvDPLC1nE8SbdrIihDWyffXKl0XszNgFGCm8iFvLH-oPrO3jQdfw";
-
         PromiseSource<String> promiseSource = new PromiseSource<>();
 
         Uri.Builder builder = new Uri.Builder();

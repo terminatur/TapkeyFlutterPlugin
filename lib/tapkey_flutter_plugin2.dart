@@ -15,8 +15,8 @@ export 'package:tapkey_flutter_plugin2/bleLock/LocksChangedHandler.dart';
 export 'package:tapkey_flutter_plugin2/auth/TokenRefreshHandler.dart';
 
 class TapkeyFlutterPlugin2 {
-  static final TapkeyFlutterPlugin2 _instance = TapkeyFlutterPlugin2();
-  static TapkeyFlutterPlugin2 get instance => _instance;
+  // static final TapkeyFlutterPlugin2 _instance = TapkeyFlutterPlugin2();
+  // static TapkeyFlutterPlugin2 get instance => _instance;
 
   final MethodChannel _channel = const MethodChannel('tapkey_flutter_plugin2');
 
@@ -28,7 +28,9 @@ class TapkeyFlutterPlugin2 {
   set tokenRefreshHandler(TokenRefreshHandler handler) => _tokenRefreshHandler = handler;
   TokenRefreshHandler get tokenRefreshHandler => _tokenRefreshHandler;
 
-  TapkeyFlutterPlugin2() {
+  TapkeyFlutterPlugin2(TokenRefreshHandler tokenRefreshHandler, LocksChangedHandler locksChangedHandler) {
+    this.locksChangedHandler = locksChangedHandler;
+    this.tokenRefreshHandler = tokenRefreshHandler;
     _channel.setMethodCallHandler(_callbackHandlerMethod);
   }
 

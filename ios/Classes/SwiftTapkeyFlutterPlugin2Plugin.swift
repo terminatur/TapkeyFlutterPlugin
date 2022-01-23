@@ -1,6 +1,6 @@
 import Flutter
 import UIKit
-//import TapkeyMobileLib
+import TapkeyMobileLib
 import witte_mobile_library
 import AppAuth
 

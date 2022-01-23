@@ -15,12 +15,11 @@ A new Flutter plugin.
   s.source           = { :path => '.' }
 #  s.source = { :git => 'https://github.com/tapkey/TapkeyCocoaPods', :tag=> '2.7.2.0' }
   s.source_files = 'Classes/**/*'
+  s.static_framework = true
   s.dependency 'Flutter'
   s.dependency 'witte-mobile-library', '1.0.0'
   s.dependency 'AppAuth'
   s.dependency 'TapkeyMobileLib', '2.7.2.0'
-#  s.dependency 'TapkeyMobileLib', :git => 'https://github.com/tapkey/TapkeyCocoaPods', :tag=> '2.7.2.0'
-#  s.dependency { :git => 'https://github.com/tapkey/TapkeyCocoaPods' }
   s.platform = :ios, '9.0'
   s.ios.deployment_target = '9.0'
   

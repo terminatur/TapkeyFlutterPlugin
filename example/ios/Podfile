@@ -25,20 +25,15 @@ end
 
 require File.expand_path(File.join('packages', 'flutter_tools', 'bin', 'podhelper'), flutter_root)
 
-flutter_ios_podfile_setup
-
 source 'https://github.com/tapkey/TapkeyCocoaPods'
 source 'https://github.com/CocoaPods/Specs.git'
 #source 'https://cdn.cocoapods.org/'
 
-#platform :ios, '9.0'
+flutter_ios_podfile_setup
 
 target 'Runner' do
   use_frameworks!
   use_modular_headers!
-  
-  pod 'AppAuth'
-  pod 'TapkeyMobileLib', '2.7.2.0'
 
   flutter_install_all_ios_pods File.dirname(File.realpath(__FILE__))
 end
